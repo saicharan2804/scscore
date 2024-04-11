@@ -9,7 +9,9 @@ setup(
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/connorcoley/scscore',
-    packages=find_packages(),
+    package_data={
+        'scscore': ['models/full_reaxys_model_1024bool/*', 'models/full_reaxys_model_2048uint/*'],
+    },
     install_requires=[
         'numpy',  # Add other dependencies as required
         'rdkit',
